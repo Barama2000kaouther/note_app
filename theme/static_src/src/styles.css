@@ -40,5 +40,10 @@
   .search_icon{
     @apply w-4 absolute left-2 top-3.5 max-md:w-3 max-md:top-3;
   }
-  
+  .bar_icon{
+    @apply w-bar-fluid aspect-square shrink-0;
+  }
+  .logo{
+    @apply w-logo-fluid h-logo-fluid  shrink-0;
+  }
 }

@@ -358,23 +358,11 @@
   .flex {
     display: flex;
   }
-  .aspect-square {
-    aspect-ratio: 1 / 1;
-  }
   .h-header {
     height: var(--height-header);
   }
-  .h-logo-fluid {
-    height: var(--height-logo-fluid);
-  }
   .h-screen {
     height: 100vh;
-  }
-  .w-bar-fluid {
-    width: var(--width-bar-fluid);
-  }
-  .w-logo-fluid {
-    width: var(--width-logo-fluid);
   }
   .shrink-0 {
     flex-shrink: 0;
@@ -555,6 +543,16 @@
     .search_icon {
       width: calc(var(--spacing) * 3);
     }
+  }
+  .bar_icon {
+    aspect-ratio: 1 / 1;
+    width: var(--width-bar-fluid);
+    flex-shrink: 0;
+  }
+  .logo {
+    height: var(--height-logo-fluid);
+    width: var(--width-logo-fluid);
+    flex-shrink: 0;
   }
 }
 @layer base {
