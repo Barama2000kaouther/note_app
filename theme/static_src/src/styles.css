@@ -12,9 +12,33 @@
 
 @theme {
   /*width and height costumazation*/
-   --width-logo-fluid: clamp(4rem, 10vw, 10rem);
-   --width-bar-fluid:clamp(1rem, 2vw, 2rem);
-   --height-logo-fluid:clamp(1.25rem,5vw,2.5rem);
-   --height-header:clamp(3.5rem, 7vh, 5rem);
+  --width-logo-fluid: clamp(4rem, 10vw, 10rem);
+  --width-bar-fluid: clamp(1rem, 2vw, 2rem);
+  --height-logo-fluid: clamp(1.25rem, 5vw, 2.5rem);
+  --height-header: clamp(3.5rem, 7vh, 5rem);
   /*color costomazation*/
+  --color-primary: #0836DD;
+  --color-background: #F3F5FD;
+  --color-surface: #F1F2F8;
+  --color-surface-secondary: #7790EC;
+}
+
+@layer components {
+  .login {
+    @apply rounded-lg bg-primary text-white font-bold text-sm px-6 py-2 max-md:text-xs max-sm:px-3 max-sm:py-1;
+
+  }
+
+  .signup {
+    @apply text-primary font-bold max-md:text-xs max-sm:text-[10px] p-0;
+  }
+
+  .search_input {
+    @apply placeholder:text-sm pl-7 py-2 pr-8 focus:outline-none focus:ring-0 rounded-sm border border-black border-solid max-md:placeholder:text-xs max-sm:placeholder:text-[10px] max-md:py-1 max-md:pr-4 max-sm:pr-0 max-sm:w-[18ch];
+  }
+
+  .search_icon{
+    @apply w-4 absolute left-2 top-3.5 max-md:w-3 max-md:top-3;
+  }
+  
 }

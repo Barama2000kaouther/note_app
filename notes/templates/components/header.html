@@ -1,16 +1,22 @@
 {%load static%}
-<header class="flex flex-row h-header items-center justify-between">
+<header class="flex flex-row h-header items-center justify-between ">
   <div class="flex flex-row shrink-0">
-    <img  class="w-bar-fluid aspect-square shrink-0" src="{% static 'notes/images/bar icon.svg' %}" alt="bar">
+    <img class="w-bar-fluid aspect-square shrink-0" src="{% static 'notes/images/bar icon.svg' %}" alt="bar">
     <img class="w-logo-fluid h-logo-fluid  shrink-0" src="{% static 'notes/images/logo.png' %}" alt="logo">
   </div>
-  
-  <div class="flex flex-row items-center">
-    <div class="">
-      <img src="{% static 'notes/images/search icon.svg' %}" alt="search">
-      <input type="text" name="" id="" placeholder="search for notes tags,title">
-    </div>
-    <button>sign up</button>
-    <button class="px-6 py-2 rounded-lg">log in</button>
+
+  <div class="flex flex-row items-center gap-x-15 max-md:gap-x-4  max-sm:gap-x-2">
+    <!--search form-->
+    <form action="" method="post" class="relative">
+      <img src="{% static 'notes/images/search icon.svg' %}"
+       alt="search" 
+       class="search_icon">
+      <input type="text" name="search"
+       placeholder="search for notes tags,title"
+      class="search_input " >
+    </form>
+
+    <button class="signup" >signup</button>
+    <button class="login">login</button>
   </div>
 </header>
