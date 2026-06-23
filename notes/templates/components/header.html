@@ -1,0 +1,16 @@
+{%load static%}
+<header class="flex flex-row h-header items-center justify-between">
+  <div class="flex flex-row shrink-0">
+    <img  class="w-bar-fluid aspect-square shrink-0" src="{% static 'notes/images/bar icon.svg' %}" alt="bar">
+    <img class="w-logo-fluid h-logo-fluid  shrink-0" src="{% static 'notes/images/logo.png' %}" alt="logo">
+  </div>
+  
+  <div class="flex flex-row items-center">
+    <div class="">
+      <img src="{% static 'notes/images/search icon.svg' %}" alt="search">
+      <input type="text" name="" id="" placeholder="search for notes tags,title">
+    </div>
+    <button>sign up</button>
+    <button class="px-6 py-2 rounded-lg">log in</button>
+  </div>
+</header>
