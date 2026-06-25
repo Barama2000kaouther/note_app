@@ -1,0 +1,39 @@
+{%load static%}
+<section id="note_list" class="flex-2 flex flex-col  justify-between">
+  <div>
+    <div class="flex flex-center py-2 border-b mb-4">
+      <img src="{% static 'notes/images/note icon.svg' %}" alt="note icon">
+      <p class="max-lg:text-sm">my note</p>
+    </div>
+    <button class="bg-primary flex items-center rounded-sm text-white px-3 py-2 mb-4 max-lg:text-sm">
+      <img src="{% static 'notes/images/add icon.svg' %}" alt="add icon" class=" max-lg:w-3">
+      create new note
+    </button>
+    <!-- the note created -->
+    <div class="note_card border rounded-sm flex flex-col gap-2 py-4 px-2 mb-3">
+      <p class="font-bold max-lg:text-sm">title of the note as a react project with</p>
+      <div class="flex gap-3">
+        <p class="text-sm bg-surface-secondary ">dev tag1</p>
+        <p class="text-sm bg-surface-secondary">dev tag2</p>
+      </div>
+      <p class="text-xs ">16 juin 2026</p>
+    </div>
+    <div class="note_card border rounded-sm flex flex-col gap-2 py-4 px-2">
+      <p class="font-bold max-lg:text-sm">title of the note as a react project with</p>
+      <div class="flex gap-3">
+        <p class="text-sm bg-surface-secondary ">dev tag1</p>
+        <p class="text-sm bg-surface-secondary">dev tag2</p>
+      </div>
+      <p class="text-xs ">16 juin 2026</p>
+    </div>
+
+  </div>
+  <div id="pagination " class="flex items-center justify-between py-2 px-[20%] max-lg:text-sm  ">
+    <a href=""> &lt;</a>
+    <a href="">1 </a>
+    <a href="">2 </a>
+    <a href="">..</a>
+    <a href=""> &gt;</a>
+  </div>
+
+</section>

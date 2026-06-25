@@ -2,17 +2,32 @@
 {% load tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %} {% endblock %}</title>
   {% tailwind_css %}
 </head>
-<body class="m-0 p-0">
-  <div class="mx-3 max-sm:mx-1">
-  {%include "components/header.html"%}
+
+<body class="m-0 p-0 flex flex-col h-screen ">
+  <div class="mx-3 max-sm:mx-1 flex-1 flex flex-col ">
+    {%include "components/header.html"%}
+    <main class="flex flex-row gap-5 max-lg:gap-4 max-sm:flex-col flex-1">
+      {%include "components/sidebar.html"%}
+      {%include "components/notelist.html"%}
+      {%include "components/creatednote.html"%}
+      {%include "components/actions.html"%}
+    </main>
+  </div>
   {% block content%}
   {%endblock%}
   </div>
+  <footer class="w-full bg-background text-center text-xs max-sm:text-[10px] py-2">
+    <p>Designed & Developed by Kouther Barama</p>
+    <p>© 2026 All rights reserved.</p>
+  </footer>
+  <script src="{% static 'notes/js/sidebar.js' %}"></script>
 </body>
+
 </html>

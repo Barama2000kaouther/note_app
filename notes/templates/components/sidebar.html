@@ -1,0 +1,37 @@
+{%load static%}
+<!--side bar section-->
+<section id="sidebar" class=" flex-1 border-r hide_sidebar ">
+  <!--the menu all and archeive notes-->
+  <div id="menu" class="flex flex-col border-b">
+    <!--home-->
+    <a href="" class=" menu_componenet">
+      <div class="flex items-center">
+        <img src="{% static 'notes/images/home icon.svg' %}" alt="home" class="mr-1">
+        <p class="max-xl:text-sm">All Notes</p>
+      </div>
+      <p class="max-xl:hidden">></p>
+    </a>
+    <!--archeive-->
+    <a href="" class="menu_componenet">
+      <div class="flex items-center">
+        <img src="{% static 'notes/images/archieve icon black.png' %}" class="w-4.5 h-4.5 mr-1" alt="archeive">
+        <p class="max-xl:text-sm">Archeive note</p>
+      </div>
+      <p class="max-xl:hidden">></p>
+    </a>
+  </div>
+
+  <!-- tags section -->
+  <div class="tags">
+    <p class="pb-5 max-xl:text-sm">tags</p>
+    <!-- tag components -->
+    <a href="" class="tag_component">
+      <img src="{% static 'notes/images/tag icon.svg' %}" class="w-4.5 h-4.5 mr-2" alt="archeive">
+      <p class="max-xl:text-sm">Archeive note</p>
+    </a>
+    <a href="" class="tag_component">
+      <img src="{% static 'notes/images/tag icon.svg' %}" class="w-4.5 h-4.5 mr-2" alt="archeive">
+      <p class="max-xl:text-sm">Archeive note</p>
+    </a>
+  </div>
+</section>

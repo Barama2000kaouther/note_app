@@ -1,0 +1,41 @@
+{%load static%}
+<section id="created_note " class="created_note ">
+  <!--  <p class="text-2xl py-40  px-20">Click "Create New Note" to create
+     a note, or select one of your 
+    existing notes from the list to view its details.
+  </p>-->
+  <p class="font-semibold ">create new note</p>
+  <!-- title note -->
+  <form action="" class="border-b">
+    <input value="title of the not as a react project" type="text" placeholder="write the title of the new note"
+      class="input_title">
+  </form>
+  <!-- tags -->
+  <div class="flex items-center border-b gap-1">
+    <img src="{% static 'notes/images/tag icon.svg' %}" class="" alt="tag">
+    <p class="max-xl:text-sm">tags</p>
+  <!-- tags title -->
+    <form action="" class="w-5 ">
+      <input value="django" type="text" class="input_tag">
+    </form>
+  </div>
+
+  <!--update date-->
+  <div class="flex items-center border-b gap-5">
+    <p class="font-semibold text-sm">updated date</p>
+    <p class="text-sm">25 juin 2026</p>
+  </div>
+
+  <!-- note content -->
+  <form action="" class="border-t">
+    <textarea name="" id="" class="input_note">
+    start writing your note
+    </textarea>
+  </form>
+  <!-- buttons action -->
+  <div class="action-button">
+    <button class="btn-form">save</button>
+    <button class="btn-form">update</button>
+    <button class="btn-form">cancel</button>
+  </div>
+</section>
