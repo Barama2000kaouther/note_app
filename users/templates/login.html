@@ -1,0 +1,39 @@
+{%extends "base_users.html"%}
+{%block title%}
+login
+{%endblock%}
+{%block content%}
+<div class="register_container">
+  <h1 class="text-primary font-bold text-2xl mb-2 max-md:text-xl">log in</h1>
+  <h3 class="max-md:text-sm max-sm:text-xs">welcome back! please enter your name and
+    password to continue</h3>
+    <br><br>
+  <form action="" class="w-full flex flex-col" >
+    {% csrf_token %}
+
+    <div >
+      <label for="username" class="font-bold max-md:text-sm max-sm:text-xs">Username</label><br>
+      <input class="input-field" type="text" id="username" name="username" placeholder="Enter your username" required>
+    </div>
+
+    <br>
+
+    <div>
+      <label for="password"  class="font-bold max-md:text-sm max-sm:text-xs">Password</label><br>
+      <input class="input-field" name="password" placeholder="Enter your password" required>
+    </div>
+
+    <br>
+    <a href="{% url 'users:password_reset' %}" class="text-sm text-primary font-semibold mb-2 self-end  max-md:text-sm max-sm:text-xs">Forgot password?</a>
+    <button type="submit" class="register_button " >Login</button>
+
+    <br><br>
+  </form>
+
+  <a href="{% url 'users:signup' %}" class="flex items-center w-full">
+   <p class="text-sm  max-sm:text-xs">Create an account?</p>
+   <p class="text-primary text-sm font-bold  max-sm:text-xs">sign up</p>
+  </a>
+
+</div>
+{%endblock%}

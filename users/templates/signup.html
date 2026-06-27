@@ -1,0 +1,54 @@
+{%extends "base_users.html"%}
+{%block title%}
+login
+{%endblock%}
+{%block content%}
+<div class="register_container">
+  <h1 class="text-primary font-bold text-2xl mb-2 max-md:text-xl">Sign Up</h1>
+  <h3 class="max-md:text-sm max-sm:text-xs">Let's get you started! Enter your details to
+    create your account.</h3>
+  <br><br>
+  <form action="" class="w-full flex flex-col">
+    {% csrf_token %}
+
+    <div>
+      <label for="username" class="font-bold max-md:text-sm max-sm:text-xs">Username</label><br>
+      <input class="input-field" type="text" id="username" name="username" placeholder="Enter your username" required>
+    </div>
+
+    <br>
+    <div>
+      <label for="email" class="font-bold max-md:text-sm max-sm:text-xs">Email</label><br>
+      <input class="input-field" type="email" id="email" name="email" placeholder="Enter your username" required>
+    </div>
+
+    <br>
+
+    <div>
+      <label for="password" class="font-bold max-md:text-sm max-sm:text-xs">Password</label><br>
+      <input class="input-field"  id="password" name="password" placeholder="Enter your password" required>
+    </div>
+
+    <br>
+    
+    <div>
+      <label for="confirm_password" class="font-bold max-md:text-sm max-sm:text-xs">
+        Confirm Password
+      </label><br>
+
+      <input type="password" id="confirm_password" name="confirm_password" class="input-field"
+        placeholder="Confirm your password" required>
+    </div>
+    <br>
+    <button type="submit" class="register_button ">Sign Up</button>
+
+    <br><br>
+  </form>
+
+  <a href="{% url 'users:login' %}" class="flex items-center w-full">
+    <p class="text-sm  max-sm:text-xs">Create an account?</p>
+    <p class="text-primary text-sm font-bold  max-sm:text-xs">Login</p>
+  </a>
+
+</div>
+{%endblock%}

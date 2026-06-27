@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'notes',
     "tailwind",
     "theme",
+    "users"
 ]
 
 MIDDLEWARE = [
